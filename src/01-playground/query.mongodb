@@ -1,1 +1,9 @@
 use("sample_training")
+
+//Filtro por ciudad
+
+//db.zips.find( {state : "NY" })
+
+//Filtro por ciudad cantidad
+
+db.zips.find( {state : "NY" }).count()
