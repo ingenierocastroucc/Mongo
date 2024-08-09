@@ -1,5 +1,5 @@
 # MONGO
-Contiene consultas para MONGODB:
+Contiene consultas para MongDb:
 * Esta version inicial MONGODB, contiene los siguientes conceptos:
 * MONGO Compass
 * MONGO VS code
