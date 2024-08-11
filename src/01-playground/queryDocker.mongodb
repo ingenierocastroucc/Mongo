@@ -1,4 +1,4 @@
-use("sample_training")
+use("CampusVirtual")
 
 // //Filtro por ciudad
 
@@ -6,4 +6,4 @@ use("sample_training")
 
 // //Filtro por ciudad cantidad
 
-db.zips.find( {state : "NY" }).count()
+db.Matriculas.find()

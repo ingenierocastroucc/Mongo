@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    environment:  # Corregido de 'enviroment' a 'environment'
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root123*  # Corregido de 'MONGO_INITDB_ROOT_PASWORD' a 'MONGO_INITDB_ROOT_PASSWORD'
+    volumes:
+      - ./mongo_data:/data/db  # Corregido el espacio entre '-' y './mongo_data'
