@@ -1,9 +1,5 @@
 use("CampusVirtual")
 
-// //Filtro por ciudad
-
-// //db.zips.find( {state : "NY" })
-
 // //Totalidad de la data colection Matriculas
 
 db.Matriculas.find()

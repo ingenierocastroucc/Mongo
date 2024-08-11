@@ -1,0 +1,45 @@
+//Base de datos
+use("CampusVirtual")
+
+//Eliminacion de collection
+db.Matriculas.drop()
+
+//Insert de varios documentos
+db.Matriculas.insertMany(
+    [
+        {
+            _id: 1,
+            "Estudiante": "Pedro Castro",
+             "AsignaturaMatriculadaId": 1,
+             "ProfesorAsignaturaId": 1,
+             "Costo": 400000
+        },
+        {
+            _id: 2,
+            "Estudiante": "Karol Sevilla",
+             "AsignaturaMatriculadaId": 1,
+             "ProfesorAsignaturaId": 1,
+             "Costo": 400000
+        },
+        {
+            _id: 5,
+            "Estudiante": "Juan Gaviria",
+             "AsignaturaMatriculadaId": 1,
+             "ProfesorAsignaturaId": 1,
+             "Costo": 400000
+        },
+        {
+            _id: 4,
+            "Estudiante": "Jose Garces",
+             "AsignaturaMatriculadaId": 1,
+             "ProfesorAsignaturaId": 1,
+             "Costo": 400000
+        }
+    ], 
+    {
+      ordered: false
+    }
+)
+
+//Consulta de collection
+db.Matriculas.find()

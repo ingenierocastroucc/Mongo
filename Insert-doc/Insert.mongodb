@@ -1,0 +1,17 @@
+use("CampusVirtual")
+
+db.Matriculas.insertOne({
+     "Id": 1,
+    "Estudiante": "Pedro Castro",
+     "AsignaturaMatriculadaId": 1,
+     "ProfesorAsignaturaId": 1,
+     "Costo": 400000
+ })
+
+db.Matriculas.insertOne({
+    "Id": 2,
+    "Estudiante": "Karol Sevilla",
+    "AsignaturaMatriculadaId": 1,
+    "ProfesorAsignaturaId": 1,
+    "Costo": 400000
+})
