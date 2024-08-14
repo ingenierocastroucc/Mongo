@@ -1,0 +1,26 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <UpdatesArrays.mongodb>                                                                      
+ * DescripciÓn   : <Contiene set de datos para realizar deletes en documentos>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 14/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 14/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ use("CampusVirtual")
+
+ db.asignaturas.drop()
+ 
+ db.asignaturas.insertMany([
+   { _id: 1, name: "CALCULO", price: 400000 },
+   { _id: 2, name: "FISICA", price: 300000 },
+   { _id: 3, name: "ESTADISTICA", price: 200000 },
+   { _id: 4, name: "TEORIA DE GRAFOS", price: 400000 },
+   { _id: 5, name: ".NET", price: 400000 },
+   { _id: 6, name: "SQL", price: 400000 },
+ ])
+ 
+ db.asignaturas.find()
