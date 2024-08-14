@@ -1,0 +1,4 @@
+use("CampusVirtual")
+
+use("CampusVirtual")
+db.iot.find()

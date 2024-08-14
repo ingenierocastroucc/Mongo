@@ -1,0 +1,30 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <UpdatesInsert.mongodb>                                                                      
+ * DescripciÓn   : <Contiene la funcion para la actualizacion de data segunvalidacion de insert>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 14/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 14/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+   use("CampusVirtual")
+
+//  db.iot.insertOne({
+//     sensor: "A001",
+//     date: "2024-08-15",
+//     readings: [1212]
+//  })
+
+ db.iot.updateOne({
+    sensor: "A001",
+    date: "2024-08-15",
+ }, {
+    $push: {
+    readings: 2324
+    }
+}, {
+     upsert: true
+ })
