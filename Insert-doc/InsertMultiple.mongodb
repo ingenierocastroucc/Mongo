@@ -8,28 +8,28 @@ db.Matriculas.drop()
 db.Matriculas.insertMany(
     [
         {
-            _id: 1,
+            //_id: 1,
             "Estudiante": "Pedro Castro",
              "AsignaturaMatriculadaId": 1,
              "ProfesorAsignaturaId": 1,
              "Costo": 400000
         },
         {
-            _id: 2,
+            //_id: 2,
             "Estudiante": "Karol Sevilla",
              "AsignaturaMatriculadaId": 1,
              "ProfesorAsignaturaId": 1,
              "Costo": 400000
         },
         {
-            _id: 5,
+            //_id: 3,
             "Estudiante": "Juan Gaviria",
              "AsignaturaMatriculadaId": 1,
              "ProfesorAsignaturaId": 1,
              "Costo": 400000
         },
         {
-            _id: 4,
+            //_id: 4,
             "Estudiante": "Jose Garces",
              "AsignaturaMatriculadaId": 1,
              "ProfesorAsignaturaId": 1,

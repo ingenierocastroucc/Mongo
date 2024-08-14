@@ -1,0 +1,19 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <UpdatesArrays.mongodb>                                                                      
+ * DescripciÓn   : <Contiene la funcion push para realizar actualizaciones en documentos por inserciones de manera individual>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 14/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 14/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+use("CampusVirtual")
+
+db.inventory.updateOne({_id: 4}, {
+    $push: {
+        tags: "headphone"
+    }
+})

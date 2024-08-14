@@ -1,0 +1,19 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <UpdatesArrays.mongodb>                                                                      
+ * DescripciÓn   : <Contiene la funcion pull para realizar actualizaciones de eliminacion en documentos de manera masiva>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 14/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 14/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ use("CampusVirtual")
+
+ db.inventory.updateMany({}, {
+     $pull: {
+         tags: "book"
+     }
+ })

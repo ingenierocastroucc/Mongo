@@ -1,0 +1,22 @@
+use("sample_training")
+
+//Filtro por ciudad
+
+db.zips.find( {city : "CLEVELAND" })
+
+//Actualiza valor en coleccion de documentos de manera masiva
+db.zips.updateMany(
+    //Condicional
+       {city : "CLEVELAND" },
+
+       {
+        //Estado
+        $set:
+        {
+        "Estado": "Activo"
+        }
+       }
+)
+
+//Consulta de collection
+db.zips.find( {city : "CLEVELAND" })

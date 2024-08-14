@@ -1,0 +1,15 @@
+//Base de datos
+use("CampusVirtual")
+
+//Actualiza valor en coleccion de documentos
+db.Matriculas.updateOne(
+    {_id: ObjectId("66b998421136414190b31280")},
+    {$set:
+        {
+        "Costo": 500000
+        }
+    }
+)
+
+//Consulta de collection
+db.Matriculas.find()
