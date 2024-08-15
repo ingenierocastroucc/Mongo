@@ -1,0 +1,21 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <OperadorRegex.mongodb>                                                                      
+ * DescripciÓn   : <Contiene el query del operador $regex>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 15/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 15/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ use("CampusVirtual")
+
+
+//Expresion regular
+ db.dotacion.find({"item.code": { $regex: /02$/im }})
+
+
+use("CampusVirtual")
+db.dotacion.find()
