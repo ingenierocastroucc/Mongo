@@ -1,0 +1,20 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <OperadorRegex.mongodb>                                                                      
+ * DescripciÓn   : <Contiene el query del operador $regex>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 15/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 15/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ use("sample_training")
+
+ db.trips.find(
+  //query
+  {tripduration: { $gte: 500}},
+  //projection
+  {tripduration: 1,  usertype: 1}
+ )
