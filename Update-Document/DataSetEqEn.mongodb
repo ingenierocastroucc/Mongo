@@ -1,0 +1,26 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <UpdatesInsert.mongodb>                                                                      
+ * DescripciÓn   : <Contiene el data set para la funcion para la funcion Eq y EN>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 14/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 14/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+
+ use("CampusVirtual")
+
+ db.dotacion.drop()
+ 
+ db.dotacion.insertMany([
+   { _id: 1, item: { elemento: "Computador", code: "C001" }, qty: 15, tags: ["A"] },
+   { _id: 2, item: { elemento: "Switch", code: "C002" }, qty: 20, tags: ["B"] },
+   { _id: 3, item: { elemento: "Servidor", code: "C003" }, qty: 25, tags: ["C", "D"] },
+   { _id: 4, item: { elemento: "Tableros Inteligentes", code: "C004" }, qty: 30, tags: ["E", "F"] },
+   { _id: 5, item: { elemento: "Luminaria", code: "C005" }, qty: 20, tags: [["G", "H"], "I"] },
+ ])
+ 
+ db.dotacion.find()

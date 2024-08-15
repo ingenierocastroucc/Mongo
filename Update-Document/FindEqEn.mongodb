@@ -1,0 +1,2 @@
+use("CampusVirtual")
+db.dotacion.find()
