@@ -1,8 +1,8 @@
 /******************************************************************************************************************
  * Propiedad intelectual de Pedro Castro                                                         
  ******************************************************************************************************************
- * Unidad        : <DeleteDocument.mongodb>                                                                      
- * DescripciÓn   : <Contiene la funcion para eliminar documentos>                                                      
+ * Unidad        : <Operadores.mongodb>                                                                      
+ * DescripciÓn   : <Contiene los operadores aritmeticos>                                                      
  * Autor         : Pedro Castro
  * Fecha         : 14/08/2024 
  *                                                                                                           
@@ -12,8 +12,6 @@
  ******************************************************************************************************************/
 use("CampusVirtual")
 
-db.asignaturas.deleteOne({_id: 1})
+//Using $gt (>) & gte (>=)
 
-//db.asignaturas.deleteMany({ price: 400000})
-
-//db.asignaturas.drop()
+db.dotacion.find({ qty: { $gt: 20}})
