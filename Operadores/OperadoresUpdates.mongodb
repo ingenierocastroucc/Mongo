@@ -16,7 +16,8 @@ use("CampusVirtual")
 //Actualiza valor en coleccion de documentos
 db.iot.updateMany(
     {sensor: "A001"},
-    {$pull:
+    {
+        $pull:
         {
          readings: { $gte: 3}
         }
