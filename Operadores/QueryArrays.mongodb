@@ -1,0 +1,48 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <QueryssArrys.mongodb>                                                                      
+ * DescripciÓn   : <Contiene los query para los Arrays>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 15/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 15/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ use("CampusVirtual");
+ db.dotacion
+
+ // $in, values & arrays
+ db.dotacion.find( { qty: { $in: [20, 25] } })
+
+  // $nin
+  use("CampusVirtual");
+  db.dotacion.find( { qty: { $nin: [20, 25] } })
+
+    // $tags
+    use("CampusVirtual");
+    db.dotacion.find( {tags: ["Estante", "Electronicos"]})
+
+    // $tags all
+    use("CampusVirtual");
+    db.dotacion.find( {tags: {$all: ["Estante", "Electronicos"]}})
+
+    // $Size
+    use("CampusVirtual");
+    db.dotacion.find( {tags: {$size: 2}})
+
+    // $ElemMmatch
+    use("CampusVirtual");
+    db.creditos.find( {results: {$elemMatch: {valorcredito: 4}}})
+
+    // $ElemMmatch $get
+    use("CampusVirtual");
+    db.creditos.find( {results: 
+        {$elemMatch: 
+            {valorcredito: 4, 
+            asignaturas: ".NET"
+        }
+    }
+})
+    

@@ -1,0 +1,26 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <DataSetOperadoresArry.mongodb>                                                                      
+ * DescripciÓn   : <Contiene el dataset para los operadores con Arrays>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 15/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 15/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+use("CampusVirtual")
+
+db.dotacion.drop()
+
+db.dotacion.insertMany([
+    { _id: 1, item: { elemento: "Computador", code: "C001" }, qty: 15, tags: [ "pantalla", "mouse", "teclado", "CPU"]},
+    { _id: 2, item: { elemento: "Switch", code: "C002" }, qty: 20, tags: [ "appliance", "school", "oragnizador" ]  },
+    { _id: 3, item: { elemento: "Servidor", code: "C003" }, qty: 25, tags: [ "refrigeracion", "accesosdeseguridad" ] },
+    { _id: 4, item: { elemento: "Tableros Inteligentes", code: "C004" }, qty: 30, tags: [ "Estante", "Electronicos" ] },
+    { _id: 5, item: { elemento: "Luminaria", code: "C005" }, qty: 20, tags: ["Distribucion", "Swicth"] },
+])
+
+db.dotacion.find()
+

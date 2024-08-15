@@ -1,0 +1,48 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <DataSetOperadoresArry.mongodb>                                                                      
+ * DescripciÓn   : <Contiene el dataset para los operadores con Arrays>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 15/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 15/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ use("CampusVirtual");
+
+ db.creditos.drop();
+ 
+ db.creditos.insertMany([
+   {
+     _id: 1,
+     results: [
+       { asignaturas: "FISICA", valorcredito: 4 },
+       { profesor: "Alberto Torregrosa", horario: 4 },
+     ],
+   },
+   {
+     _id: 2,
+     results: [
+       { asignaturas: "SQL", valorcredito: 3 },
+       { profesor: "Juan raul", horario: 4 },
+     ],
+   },
+   {
+     _id: 3,
+     results: [
+       { asignaturas: "CALCULO", valorcredito: 8 },
+       { profesor: "Pedro Diaz", horario: 3 },
+     ],
+   },
+   {
+     _id: 4,
+     results: [
+       { asignaturas: ".NET", valorcredito: 4 },
+       { profesor: "alberto Duran", horario: 4 },
+     ],
+   },
+ ]);
+ 
+ db.creditos.find();
