@@ -1,0 +1,40 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <DataSetOperadoresExpresivos.mongodb>                                                                      
+ * DescripciÓn   : <Contiene el dataset para los operadores con Arrays>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 15/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 15/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ use("sample_training");
+ db.trips.findOne({"start station location.type": "Point"})
+
+ //Consulta de subdocumentos
+ use("sample_training");
+ db.companies.find(
+    {"relationships.0.person.last_name" : "Zuckerberg"},
+    {
+        name : 1,
+        relationships: 1
+    }
+ )
+
+  //Consulta de subdocumentos
+  use("sample_training");
+  db.companies.find({
+     relationships: {
+      $elemMatch:
+      {
+        "person.last_name": "Zuckerberg"
+      }
+    }
+},
+{
+  name : 1,
+  relationships: 1
+  }
+).count()
