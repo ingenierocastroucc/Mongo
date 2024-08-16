@@ -1,0 +1,30 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <DataSetSort.mongodb>                                                                      
+ * DescripciÓn   : <Contiene el DataSet para el operador $sort>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 16/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 16/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ use("CampusVirtual")
+
+db.categories.drop()
+
+db.categories.insertMany([
+  { _id: 1, name: "category 1" },
+  { _id: 2, name: "category 2" },
+  { _id: 3, name: "category 3" },
+  { _id: 4, name: "category 4" },
+  { _id: 5, name: "category 5" },
+  { _id: 6, name: "category 6" },
+  { _id: 7, name: "category 7" },
+  { _id: 8, name: "category 8" },
+  { _id: 9, name: "category 9" },
+  { _id: 10, name: "category 10" },
+])
+
+db.categories.find()
