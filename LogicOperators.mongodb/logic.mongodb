@@ -1,0 +1,85 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <OperadoresLogicos.mongodb>                                                                      
+ * DescripciÓn   : <Contiene los operadores logicos>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 15/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 15/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+
+ use("sample_training")
+ // and implicito
+ db.inspections.find( {
+    sector: "Tax Preparers - 891",
+    result: "Unable to Locate"
+  } 
+).count()
+
+ // and explicito
+use("sample_training")
+ db.inspections.find( {
+    $and: [
+    {sector: "Tax Preparers - 891"},
+    {result: "Unable to Locate"}
+    ]
+  } 
+).count()
+
+ // or
+ use("sample_training")
+ db.inspections.find( {
+    $or: [
+    {sector: "Tax Preparers - 891"},
+    {result: "Unable to Locate"}
+    ]
+  } 
+).count()
+
+ // nor
+ use("sample_training")
+ db.inspections.find( {
+    $nor: [
+    {sector: "Tax Preparers - 891"},
+    {result: "Unable to Locate"}
+    ]
+  } 
+).count()
+
+ // nor con projection
+ use("sample_training")
+ db.inspections.find( {
+    $nor: [
+    {sector: "Tax Preparers - 891"},
+    {result: "Unable to Locate"}
+    ]
+  }, {
+    result: 1,
+    _id: 0
+  } 
+)
+
+ // not
+ use("sample_training")
+ db.inspections.find( {
+    result: { $not: {$regex: /Unable to Locate/}}
+  }
+)
+
+ //Routes
+ db.routes.find({
+    $and: [
+        { airplane: "E70"},
+    {
+    $or: 
+      [
+        { dst_airport: "BOG" },
+        { src_airport: "BOG" }
+      ]
+    }
+    ]                
+}
+).count()
