@@ -1,0 +1,34 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <Aggregation.mongodb>                                                                      
+ * DescripciÓn   : <Contiene la configuracion para Agreggation framework>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 16/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 16/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ 
+ //Projection
+ use("sample_airbnb");
+ db.listingsAndReviews.find(
+    {
+        amenities: "Wifi"
+    }, 
+    {
+        price: 1,
+        amenities: 1
+    }
+ )
+
+ //Aggregations
+ use("sample_airbnb");
+ db.listingsAndReviews.aggregate(
+    [   //Pipilines
+        { $match: {amenities: "Wifi"}},
+        { $project: { address: 1}},
+        { $group: {_id: "$address.country", count: {$sum: 1}}}
+    ]
+)

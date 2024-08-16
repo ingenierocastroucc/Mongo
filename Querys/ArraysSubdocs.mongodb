@@ -1,8 +1,8 @@
 /******************************************************************************************************************
  * Propiedad intelectual de Pedro Castro                                                         
  ******************************************************************************************************************
- * Unidad        : <DataSetOperadoresExpresivos.mongodb>                                                                      
- * DescripciÓn   : <Contiene el dataset para los operadores con Arrays>                                                      
+ * Unidad        : <ArraysSubdocs.mongodb>                                                                      
+ * DescripciÓn   : <Contiene los querys para los subdocumentos>                                                      
  * Autor         : Pedro Castro
  * Fecha         : 15/08/2024 
  *                                                                                                           
