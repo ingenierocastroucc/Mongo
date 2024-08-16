@@ -1,0 +1,25 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <DataSetOperadoresExpresivos.mongodb>                                                                      
+ * DescripciÓn   : <Contiene el dataset para los operadores con Arrays>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 15/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 15/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
+ use("CampusVirtual");
+
+db.cooperativaescolar.drop()
+
+db.cooperativaescolar.insertMany([
+  { "_id" : 1, "categorias" : "comidas",    "presupuesto": 400, "costo": 450 },
+  { "_id" : 2, "categorias" : "bebidas",  "presupuesto": 100, "costo": 150 },
+  { "_id" : 3, "categorias" : "snacks", "presupuesto": 100, "costo": 50  },
+  { "_id" : 4, "categorias" : "jugos",    "presupuesto": 500, "costo": 300 },
+  { "_id" : 5, "categorias" : "frutas",  "presupuesto": 200, "costo": 650 }
+])
+
+db.cooperativaescolar.find()
