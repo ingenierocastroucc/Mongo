@@ -1,5 +1,0 @@
-use("CampusVirtual")
-
-// //Totalidad de la data colection Matriculas
-
-db.Matriculas.find()

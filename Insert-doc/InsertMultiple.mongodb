@@ -1,3 +1,15 @@
+/******************************************************************************************************************
+ * Propiedad intelectual de Pedro Castro                                                         
+ ******************************************************************************************************************
+ * Unidad        : <InsertMultiple.mongodb>                                                                      
+ * DescripciÓn   : <Contiene el query para hacer inserctions nultiples a documentos>                                                      
+ * Autor         : Pedro Castro
+ * Fecha         : 16/08/2024 
+ *                                                                                                           
+ * Fecha         Autores         	                Modificación                                                                 
+ * ===========   ===============================   	=====================
+ * 16/08/2024     Pedro Castro                       1. Creacion inicial
+ ******************************************************************************************************************/
 //Base de datos
 use("CampusVirtual")
 
